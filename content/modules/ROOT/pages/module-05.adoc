@@ -1,7 +1,9 @@
+= Cleanup
+
 Unlike interactive containers, detached containers are stopped using
 *podman stop *.
 
-[source,bash]
+[source,bash,subs="+macros,+attributes",role=execute]
 ----
 podman stop $(podman ps -a | grep Up | cut -d" " -f1)
 ----
@@ -12,11 +14,10 @@ image.
 
 You can verify that the container is now exited:
 
-[source,bash]
+[source,bash,subs="+macros,+attributes",role=execute]
 ----
 podman ps -a
 ----
 
-CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES 2b2571efec6f
-localhost/rhel9-httpd:latest /usr/sbin/httpd -… 9 minutes ago Exited (0)
-50 seconds ago 0.0.0.0:8081->80/tcp priceless_mahavira ```
+CONTAINER ID IMAGE                        COMMAND            CREATED       STATUS                    PORTS                NAMES 
+2b2571efec6f localhost/rhel9-httpd:latest /usr/sbin/httpd -… 9 minutes ago Exited (0) 50 seconds ago 0.0.0.0:8081->80/tcp priceless_mahavira ```
