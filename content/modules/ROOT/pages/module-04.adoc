@@ -1,3 +1,5 @@
+= Deploy a container image into a detached container runtime
+
 Running an interactive container is all well and good, however, if the
 container is offering applications or services, you do not need to
 interact with it.
@@ -11,34 +13,32 @@ to the host’s port 8081 will redirect to the running container’s port 80
 
 Run the following command in the `+Podman+` tab.
 
-[source,bash]
+[source,bash,subs="+macros,+attributes",role=execute]
 ----
 podman run -dt -p 8081:80/tcp rhel9-httpd
 ----
 
 You can verify the state of the container using *podman ps*
 
-[source,bash]
+[source,bash,subs="+macros,+attributes",role=execute]
 ----
 podman ps -a
 ----
 
-CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES 2b2571efec6f
-localhost/rhel9-httpd:latest /usr/sbin/httpd -… 13 seconds ago Up 12
-seconds ago 8081->80/tcp priceless_mahavira
-
-....
+[source,text]
+----
+CONTAINER ID  IMAGE                        COMMAND            CREATED        STATUS           PORTS        NAMES 
+2b2571efec6f  localhost/rhel9-httpd:latest /usr/sbin/httpd -… 13 seconds ago Up 12seconds ago 8081->80/tcp priceless_mahavira
+----
 
 Observe that the __STATUS__ is __Up__ and there is a new section in the output __PORTS__ that indicates the port forwarding defined for the container.
 
 Test the webserver on the container with `curl`.
 
-```bash
+[source,bash,subs="+macros,+attributes",role=execute]
+----
 curl localhost:8081
-....
+----
 
 This should now display the Apache test page, being served by the httpd
 daemon running in the container.
-
-.apache
-image::apache.png[apache]
