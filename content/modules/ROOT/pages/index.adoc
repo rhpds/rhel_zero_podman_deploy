@@ -1,21 +1,21 @@
+= Introduction
+
 In this lab we have two terminals to make navigation easier. The
 `+Podman+` terminal will be used for podman related tasks. The
 `+RHEL Host+` tab will be used for host related tasks.
 
-.nav tabs
-image::navtabs.png[nav tabs]
 
 Click on the `+Podman+` tab.
 
 Enter the following command to view the existing images on the RHEL
 host.
 
-[source,bash]
+[source,bash,subs="+macros,+attributes",role=execute]
 ----
 podman images
 ----
 
-[source,bash]
+[source,text]
 ----
 REPOSITORY              TAG      IMAGE ID       CREATED        SIZE
 localhost/rhel9-httpd   latest   c12e3720df7b   43 hours ago   499 MB
