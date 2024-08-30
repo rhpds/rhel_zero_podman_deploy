@@ -29,17 +29,13 @@ df -hP
 
 [source,text]
 ----
-Filesystem Size Used  Avail Use%   Mounted on
-overlay     35G 6.1G    30G   36%  /
-tmpfs       64M   0     64M   0%   /dev
-tmpfs       909M  9.8M  900M  2%   /etc/hosts
-shm         63M   0     63M   0%   /dev/shm 
-tmpfs       909M  0     909M  0%   /sys/fs/cgroup 
-tmpfs       909M  0     909M  0%   /proc/acpi  
-tmpfs       909M  0     909M  0%   /proc/scsi 
-tmpfs       909M  0     909M  0%   /sys/firmware 
-tmpfs       909M  0     909M  0%   /sys/fs/selinux 
-tmpfs       909M  0     909M  0%   /sys/dev
+bash-5.1$ df -hP
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          49G  3.5G   46G   8% /
+tmpfs            64M     0   64M   0% /dev
+tmpfs           719M   13M  707M   2% /etc/hosts
+shm              63M     0   63M   0% /dev/shm
+devtmpfs        4.0M     0  4.0M   0% /proc/keys
 ----
 
 You will notice that all of the filesystem contents are either memory-based (tmpfs, shm) or the overlay file associated with this runtime of the container image (overlay).
