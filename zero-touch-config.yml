@@ -22,6 +22,6 @@ tabs:
     host: rhel 
   - name: ">_ RHEL Host"
     port: 443
-    path: /tty1
+    path: /tty2
     user: root
     host: rhel
