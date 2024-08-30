@@ -26,7 +26,7 @@ podman ps -a
 
 [source,text]
 ----
-[root@bastion ~]# podman ps
+[root@rhel ~]# podman ps
 CONTAINER ID  IMAGE                         COMMAND               CREATED        STATUS        PORTS                   NAMES
 435145543bf6  localhost/rhel9-httpd:latest  /usr/bin/run-http...  2 minutes ago  Up 2 minutes  0.0.0.0:8081->8080/tcp  sweet_wu
 ----
