@@ -43,5 +43,5 @@ curl localhost:8081
 This should now display the Apache test page, being served by the httpd
 daemon running in the container.
 
-.apache
-image::apache.png[apache]
+.Apache
+image::apache.png[Apache]
