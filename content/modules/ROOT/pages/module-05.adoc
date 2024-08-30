@@ -20,7 +20,7 @@ podman ps -a
 ----
 
 CONTAINER ID IMAGE                        COMMAND            CREATED       STATUS                    PORTS                NAMES 
-2b2571efec6f localhost/rhel9-httpd:latest /usr/sbin/httpd -… 9 minutes ago Exited (0) 50 seconds ago 0.0.0.0:8081->80/tcp priceless_mahavira ```
+2b2571efec6f localhost/rhel9-httpd:latest /usr/sbin/httpd -… 9 minutes ago Exited (0) 50 seconds ago 0.0.0.0:8081->8080/tcp priceless_mahavira ```
 
 .Stopped Container
 image::stopped-again.png[Stopped Container]
