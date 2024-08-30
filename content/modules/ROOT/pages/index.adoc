@@ -19,8 +19,8 @@ podman images
 
 [source,text]
 ----
-REPOSITORY                                TAG      IMAGE ID       CREATED        SIZE
-registry.access.redhat.com/ubi9/httpd-24  latest   c12e3720df7b   43 hours ago   499 MB
+REPOSITORY             TAG      IMAGE ID       CREATED        SIZE
+localhost/rhel9-httpd  latest   c12e3720df7b   43 hours ago   499 MB
 ----
 
 There is one container available in the local (localhost) repository,
