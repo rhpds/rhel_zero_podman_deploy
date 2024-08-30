@@ -51,8 +51,8 @@ Switch to the `RHEL Host` tab. Use this terminal to verify that the container is
 podman ps -a
 ----
 
-.RHEL Host PSA
-image::rhelhostpsa.png[RHEL Host PSA]
+.RHEL Host
+image::rhelhostpsa.png[RHEL Host]
 
 *Note:* Your CONTAINER ID and NAMES will be different than the output
 displayed above as each container is assigned a unique ID and Name.
