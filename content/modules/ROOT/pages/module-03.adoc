@@ -22,6 +22,8 @@ CONTAINER ID   IMAGE                        COMMAND   CREATED     STATUS        
 df54b664f133   localhost/rhel9-httpd:latest /bin/bash 2 hours ago Exited (0) 5 seconds ago        heuristic_cray
 ----
 
+.nav tabs
+image::stopped-again.png[nav tabs]
 
 Notice the __STATUS__ field is now reported as Exited.
 
