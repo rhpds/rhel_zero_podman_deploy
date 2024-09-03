@@ -5,6 +5,7 @@ will deploy the container in an interactive fashion, which will allow
 you to run commands within the deployed container. In the `+Podman+` tab
 run the following:
 
+.Command
 [source,bash,subs="+macros,+attributes",role=execute]
 ----
 podman run -it rhel9-httpd /bin/bash
@@ -12,7 +13,7 @@ podman run -it rhel9-httpd /bin/bash
 
 You should now be looking at a generic bash shell prompt:
 
-
+.Output
 [source,text]
 ----
 bash-5.1#
@@ -21,12 +22,13 @@ bash-5.1#
 
 In the `Podman` tab, the displayed shell is running inside the container image, not the host operating system.  To confirm this, take a look at the mounted filesystems:
 
-
+.Command
 [source,bash,subs="+macros,+attributes",role=execute]
 ----
 df -hP
 ----
 
+.Output
 [source,text]
 ----
 bash-5.1$ df -hP
@@ -42,6 +44,7 @@ You will notice that all of the filesystem contents are either memory-based (tmp
 
 Switch to the `RHEL Host` tab. Use this terminal to verify that the container is running:
 
+.Command
 [source,bash,subs="+macros,+attributes",role=execute]
 ----
 podman ps -a
