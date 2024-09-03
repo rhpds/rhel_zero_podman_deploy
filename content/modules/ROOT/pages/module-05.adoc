@@ -3,6 +3,7 @@
 Unlike interactive containers, detached containers are stopped using
 *podman stop *.
 
+.Command
 [source,bash,subs="+macros,+attributes",role=execute]
 ----
 podman stop $(podman ps -a | grep Up | cut -d" " -f1)
@@ -14,6 +15,7 @@ image.
 
 You can verify that the container is now exited:
 
+.Command
 [source,bash,subs="+macros,+attributes",role=execute]
 ----
 podman ps -a
