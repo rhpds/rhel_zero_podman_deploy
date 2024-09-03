@@ -12,11 +12,13 @@ Click on the `+Podman+` tab.
 Enter the following command to view the existing images on the RHEL
 host.
 
+.Command
 [source,bash,subs="+macros,+attributes",role=execute]
 ----
 podman images
 ----
 
+.Output
 [source,text]
 ----
 REPOSITORY                                TAG         IMAGE ID      CREATED      SIZE
