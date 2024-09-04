@@ -25,12 +25,22 @@ CONTAINER ID   IMAGE                        COMMAND   CREATED     STATUS        
 df54b664f133   localhost/rhel9-httpd:latest /bin/bash 2 hours ago Exited (0) 5 seconds ago        heuristic_cray
 ----
 
-.Stopped Container
-image::stopped-container.png[Stopped Container]
-
 Notice the __STATUS__ field is now reported as Exited.
 
-A container in this state can be resumed, however, this one will no longer be used.  You will remove it from the system. using __podman rm <CONTAINER ID>__.  In the command below, we use a bit of bash scripting to determine the CONTAINER ID as it is unique to each container image.
+.Stopped Container
+image::stopped-container-zt.png[Stopped Container]
+
+NOTE: A container in this state can be resumed, however, in this case it will no longer be used.
+
+Typically you can remove a single container from a system using the below command structure.
+
+.Example
+[source,text]
+----
+podman rm <CONTAINER ID>
+----
+
+For this training we will use bash scripting to determine the CONTAINER ID as it is unique to each container image.
 
 .Command
 [source,bash,subs="+macros,+attributes",role=execute]
@@ -38,5 +48,4 @@ A container in this state can be resumed, however, this one will no longer be us
 podman rm $(podman ps -a | grep Exited | cut -d" " -f1)
 ----
 
-The output of this removal is the full CONTAINER ID which was removed
-from the system.
+The output of this removal is the full CONTAINER ID which was removed from the system.

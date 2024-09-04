@@ -44,14 +44,21 @@ You will notice that all of the filesystem contents are either memory-based (tmp
 
 Switch to the `RHEL Host` tab. Use this terminal to verify that the container is running:
 
+.RHEL Host
+image::rhelhostpsa-zt.png[RHEL Host]
+
 .Command
 [source,bash,subs="+macros,+attributes",role=execute]
 ----
 podman ps -a
 ----
 
-.RHEL Host
-image::rhelhostpsa.png[RHEL Host]
+.Output
+[source,text]
+----
+CONTAINER ID  IMAGE                         COMMAND     CREATED         STATUS         PORTS       NAMES
+80c127a22f82  localhost/rhel9-httpd:latest  /bin/bash   41 seconds ago  Up 41 seconds              focused_margulis
+----
 
-*Note:* Your CONTAINER ID and NAMES will be different than the output
+IMPORTANT: Your CONTAINER ID and NAMES will be different than the output
 displayed above as each container is assigned a unique ID and Name.

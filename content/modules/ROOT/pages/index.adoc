@@ -5,7 +5,7 @@ In this lab we have two terminals to make navigation easier. The
 `+RHEL Host+` tab will be used for host related tasks.
 
 .Tabs
-image::navtabs.png[Tabs]
+image::navtabs-zt.png[Tabs]
 
 Click on the `+Podman+` tab.
 
@@ -22,8 +22,8 @@ podman images
 [source,text]
 ----
 REPOSITORY                                TAG         IMAGE ID      CREATED      SIZE
-localhost/rhel9-httpd                     latest      816f08f2a984  11 days ago  387 MB
-registry.access.redhat.com/ubi9/httpd-24  latest      816f08f2a984  11 days ago  387 MB
+localhost/rhel9-httpd                     latest      043cd71cfc4f  7 days ago   388 MB
+registry.access.redhat.com/ubi9/httpd-24  latest      043cd71cfc4f  7 days ago   388 MB
 ----
 
 There is one container available in the local (localhost) repository,

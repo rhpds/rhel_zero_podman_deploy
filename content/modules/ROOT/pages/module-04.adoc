@@ -33,9 +33,9 @@ CONTAINER ID  IMAGE                         COMMAND               CREATED       
 435145543bf6  localhost/rhel9-httpd:latest  /usr/bin/run-http...  2 minutes ago  Up 2 minutes  0.0.0.0:8081->8080/tcp  sweet_wu
 ----
 
-Observe that the __STATUS__ is __Up__ and there is a new section in the output __PORTS__ that indicates the port forwarding defined for the container.
+Observe that the `STATUS` is `Up` and there is a new section in the output `PORTS` that indicates the port forwarding defined for the container.
 
-Test the webserver on the container with `curl`.
+Test the webserver on the container with the `curl` command.
 
 .Command
 [source,bash,subs="+macros,+attributes",role=execute]
@@ -46,5 +46,15 @@ curl localhost:8081
 This should now display the Apache test page, being served by the httpd
 daemon running in the container.
 
-.Apache
-image::apache.png[Apache]
+.Output
+[source,text]
+----
+<< OUTPUT ABRIDGED >>
+
+    </div>
+<div class="footer">
+    <a href="https://apache.org">Apache&trade;</a> is a registered trademark of <a href="https://apache.org">the Apache Software Foundation</a> in the United States and/or other countries.
+<br />
+    <a href="https://nginx.com">NGINX&trade;</a> is a registered trademark of <a href="https://www.f5.com">F5 Networks, Inc.</a>.
+</div>
+----
